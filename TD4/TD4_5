@@ -1,0 +1,24 @@
+Algorithme somme_puissances_deux
+    Variables :
+        n : Entier  # Le nombre d'exposants
+        somme : Entier  # La somme des puissances de 2
+
+    e.Afficher("Veuillez entrer un entier positif n : ")
+    cl.Saisir(n)
+
+    # Vérifier que n est positif
+    Si n < 0
+        e.Afficher("L'entier n doit être positif.")
+        Arrêter l'algorithme
+
+    # Initialiser la somme à 0
+    somme <- 0
+
+    # Calculer la somme des puissances de 2 jusqu'à n
+    Pour i allant de 0 à n
+        somme <- somme + 2^i
+
+    # Afficher le résultat
+    e.Afficher("La somme des ", n+1, " premières puissances de 2 est : ", somme)
+
+Fin de l'algorithme

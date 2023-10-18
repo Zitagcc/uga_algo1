@@ -1,0 +1,16 @@
+Algorithme cvCE(x : Caractère) → Entier entre 0 et 9
+    Variables :
+        t : Tableau [0...9] de Caractères = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+        i : Entier  # Indice dans le tableau t
+        valeur : Entier  # Valeur entière correspondante au caractère
+
+    # Parcourir le tableau t pour trouver le caractère x
+    Pour i allant de 0 à 9
+        Si t[i] == x
+            valeur <- i  # La valeur correspond à l'indice dans le tableau
+            Sortir de la boucle  # Sortir de la boucle une fois que le caractère est trouvé
+
+    # Retourner la valeur entière correspondante
+    Renvoyer valeur
+
+Fin de l'algorithme

@@ -1,0 +1,50 @@
+a) État initial et État final :
+
+État initial :
+
+a, b, c, d : Les 4 entiers à partir desquels nous devons calculer les deux plus petites valeurs.
+m1, m2 : Variables où nous stockerons les deux plus petites valeurs après l'exécution de l'action.
+État final :
+
+m1, m2 : Contiennent les deux plus petites valeurs parmi a, b, c et d après l'exécution de l'action. Les valeurs de a, b, c, et d restent inchangées.
+b) Action calculerDeuxPlusPetits (lexique et algorithme) :
+
+Action calculerDeuxPlusPetits (consultés a, b, c, d : entiers ; élaborés m1, m2 : entiers)
+    // Lexique
+    Variables :
+        temp : Entier  # Variable temporaire pour effectuer des comparaisons
+
+    // Algorithme
+    Si a <= b
+        Si a <= c
+            m1 <- a
+            Si b <= c
+                m2 <- b
+            Sinon
+                m2 <- c
+            FinSi
+        Sinon
+            m1 <- c
+            m2 <- a
+        FinSi
+    Sinon
+        Si b <= c
+            m1 <- b
+            Si a <= c
+                m2 <- a
+            Sinon
+                m2 <- c
+            FinSi
+        Sinon
+            m1 <- c
+            m2 <- b
+        FinSi
+    FinSi
+
+    Si d < m1
+        m2 <- m1
+        m1 <- d
+    Sinon Si d < m2
+        m2 <- d
+    FinSi
+FinAction

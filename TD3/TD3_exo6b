@@ -1,0 +1,29 @@
+Fonction eval(e: Chaîne de caractères) -> Entier
+    # Extraire les composants de l'expression
+    chiffre1 <- ConvertirEnEntier(e[0])
+    operateur <- e[1]
+    chiffre2 <- ConvertirEnEntier(e[2])
+
+    # Évaluer l'expression en fonction de l'opérateur
+    Si operateur == '+'
+        Renvoyer chiffre1 + chiffre2
+    Sinon Si operateur == '-'
+        Renvoyer chiffre1 - chiffre2
+    Sinon Si operateur == '*'
+        Renvoyer chiffre1 * chiffre2
+    Sinon Si operateur == '/'
+        # Division entière (euclidienne)
+        Renvoyer chiffre1 / chiffre2  # La division peut donner un nombre à virgule, mais on veut un résultat entier
+    Sinon
+        e.Afficher("Opérateur invalide")
+        Renvoyer 0  # Retourner 0 en cas d'opérateur invalide
+
+# Exemples d'utilisation
+resultat1 <- eval("3-7")
+e.Afficher("Résultat de l'expression 3-7 :", resultat1)
+
+resultat2 <- eval("3*9")
+e.Afficher("Résultat de l'expression 3*9 :", resultat2)
+
+resultat3 <- eval("8/3")
+e.Afficher("Résultat de l'expression 8/3 :", resultat3)

@@ -1,0 +1,34 @@
+Algorithme calculer_moyenne_notes
+    Variables :
+        note : Réel  # La note saisie par l'utilisateur
+        total_notes : Réel  # La somme des notes
+        compteur_notes : Entier  # Le nombre de notes saisies
+        moyenne : Réel  # La moyenne des notes
+
+    total_notes <- 0
+    compteur_notes <- 0
+
+    e.Afficher("Veuillez entrer les notes (entre 0 et 20), et -1 pour terminer la saisie :")
+
+    # Boucle pour saisir les notes
+    Tant que note != -1
+        cl.clavier(note)
+        Si note == -1
+            Sortir de la boucle
+        Sinon Si note < 0 ou note > 20
+            e.Afficher("Veuillez entrer une note valide entre 0 et 20.")
+        Sinon
+            total_notes <- total_notes + note
+            compteur_notes <- compteur_notes + 1
+        FinSi
+    FinTantQue
+
+    # Calculer la moyenne
+    Si compteur_notes > 0
+        moyenne <- total_notes / compteur_notes
+        e.Afficher("La moyenne des notes est :", moyenne)
+    Sinon
+        e.Afficher("Aucune note valide n'a été saisie.")
+    FinSi
+
+Fin de l'algorithme

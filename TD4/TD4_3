@@ -1,0 +1,13 @@
+Type Point:
+    x: Réel
+    y: Réel
+
+Fonction calculer_distance(point1: Point, point2: Point) -> Réel
+    # Utiliser la formule de la distance euclidienne
+    distance <- racine_carree((point2.x - point1.x)^2 + (point2.y - point1.y)^2)
+    Renvoyer distance
+
+# Exemple d'utilisation
+
+distance_entre_points = calculer_distance(point1, point2)
+e.Afficher("La distance entre les points est :", distance_entre_points)

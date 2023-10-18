@@ -1,0 +1,31 @@
+Algorithme dessiner_carrés_emboîtés
+    Variables :
+        taille_exterieur : Réel  # Taille du côté du carré extérieur
+        x_inf_exterieur, y_inf_exterieur : Réel  # Coordonnées du sommet inférieur du carré extérieur
+        taille_interieur : Réel  # Taille du côté du carré intérieur
+        x_inf_interieur, y_inf_interieur : Réel  # Coordonnées du sommet inférieur du carré intérieur
+
+    # cl.clavier la taille du côté et les coordonnées du sommet inférieur du carré extérieur
+    e.afficher("Veuillez entrer la taille du côté du carré extérieur : ")
+    cl.clavier(taille_exterieur)
+    e.afficher("Veuillez entrer les coordonnées du sommet inférieur du carré extérieur (x, y) : ")
+    cl.clavier(x_inf_exterieur, y_inf_exterieur)
+
+    # Calculer la taille du côté du carré intérieur (par exemple, la moitié de la taille du côté du carré extérieur)
+    taille_interieur <- taille_exterieur / 2
+
+    # Calculer les coordonnées du sommet inférieur du carré intérieur
+    x_inf_interieur <- x_inf_exterieur + (taille_exterieur - taille_interieur) / 2
+    y_inf_interieur <- y_inf_exterieur + (taille_exterieur - taille_interieur) / 2
+
+    # Afficher le carré extérieur
+    e.afficher("Carré extérieur :")
+    e.afficher("Côté :", taille_exterieur)
+    e.afficher("Coordonnées du sommet inférieur :", x_inf_exterieur, ", ", y_inf_exterieur)
+
+    # Afficher le carré intérieur
+    e.afficher("Carré intérieur :")
+    e.afficher("Côté :", taille_interieur)
+    e.afficher("Coordonnées du sommet inférieur :", x_inf_interieur, ", ", y_inf_interieur)
+
+Fin de l'algorithme

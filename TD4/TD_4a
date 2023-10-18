@@ -1,0 +1,23 @@
+Algorithme calculer_puissance_n
+    Variables :
+        x : Réel  # Le nombre
+        n : Entier  # L'exposant
+        resultat : Réel  # Résultat de la puissance
+
+    e.Afficher("Veuillez entrer le nombre x : ")
+    cl.Saisir(x)
+
+    e.Afficher("Veuillez entrer l'exposant n : ")
+    cl.Saisir(n)
+
+    # Initialiser le résultat à 1
+    resultat <- 1.0
+
+    # Calculer la puissance nième de x
+    Pour i allant de 1 à n
+        resultat <- resultat * x
+
+    # Afficher le résultat
+    e.Afficher("La puissance ", n, " de ", x, " est : ", resultat)
+
+Fin de l'algorithme
